@@ -1,0 +1,13 @@
+import { defineConfig } from "tsup";
+
+export default defineConfig({
+  entry: {
+    index: "src/index.ts",
+  },
+  format: ["esm", "cjs"],
+  dts: true,
+  sourcemap: true,
+  splitting: false,
+  shims: true,
+  external: ["@solana/web3.js", "borsh", "bn.js"],
+});
